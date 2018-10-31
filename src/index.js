@@ -46,7 +46,6 @@ async function photon() {
   }
 
   return highlight
-
 }
 
 export default photon

@@ -11,10 +11,10 @@ var _utils = require("./utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function photon() {
-  async function highlight(document) {
-    const highlighter = await (0, _photonCore.default)();
+async function photon() {
+  const highlighter = await (0, _photonCore.default)();
 
+  async function highlight(document) {
     async function walkNode(node) {
       let newNode = node;
 
@@ -39,11 +39,8 @@ function photon() {
     return (0, _utils.parseNodesAsHtml)((await Promise.all(nodes.map(walkNode))));
   }
 
-  return {
-    highlight
-  };
+  return highlight;
 }
 
-var _default = photon();
-
+var _default = photon;
 exports.default = _default;
