@@ -1,7 +1,7 @@
 {
   "name": "@photonsh/photon-node-local",
   "description": "photon-node-local is a standalone Node.js library for Photon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./dist/index.js",
   "repository": {
     "type": "git",
