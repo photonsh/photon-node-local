@@ -2,10 +2,10 @@ import photonCore from '@photonsh/photon-core'
 
 import { parseHtmlAsNodes, parseNodesAsHtml } from './utils'
 
-function photon() {
-  async function highlight(document) {
-    const highlighter = await photonCore()
+async function photon() {
+  const highlighter = await photonCore()
 
+  async function highlight(document) {
     async function walkNode(node) {
       let newNode = node
 
@@ -45,8 +45,8 @@ function photon() {
     return parseNodesAsHtml(await Promise.all(nodes.map(walkNode)))
   }
 
-  return { highlight }
+  return highlight
 
 }
 
-export default photon()
+export default photon
